@@ -1,0 +1,21 @@
+{
+  "devDependencies": {
+    "electron": "^31.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "name": "cookis",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.8.0"
+  }
+}

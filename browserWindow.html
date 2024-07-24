@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Electron Cookie Example</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cookie Manager</h1>
+    <div>
+      <label for="cookie-name">Name:</label><br>
+      <input type="text" id="cookie-name" placeholder="Enter cookie name">
+    </div>
+    <div>
+      <label for="cookie">Cookie:</label><br>
+      <input type="text" id="cookie" placeholder="Enter cookies (e.g., name=value; name2=value2)">
+    </div>
+    <button id="submit">提交保存</button>
+    <button id="exit">退出</button>
+    <div id="cookie-tabs"></div>
+  </div>
+  <script src="renderer-browser.js"></script>
+</body>
+</html>

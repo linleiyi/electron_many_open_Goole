@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            margin-bottom: 38px;
+            background-color: #f0f0f0;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        input, button {
+            display: block;
+            margin-bottom: 10px;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        li {
+            background: #fff;
+            padding: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            /* position: relative; */
+
+        }
+        li:hover {
+            background: #e0e0e0;
+        }
+        .fa-edit{
+            /* margin-left: 25px; */
+            cursor: pointer;
+            color: black;
+            font-size: 12px;
+        }
+         .fa-trash-alt{
+            cursor: pointer;
+            text-align: center;
+            margin-left: 15px;
+            color: black;
+            font-size: 12px;
+            
+        }
+
+        .fa-edit:hover,
+        .fa-trash-alt:hover{
+            color: orange;
+        }
+
+/* 模拟窗口 */
+        .modal {
+            display: none; /* 默认隐藏 */
+            position: fixed; /* 固定定位 */
+            z-index: 1; /* 在其他元素之上 */
+            left: 0;
+            top: 0;
+            width: 100%; /* 全屏宽度 */
+            height: 100%; /* 全屏高度 */
+            overflow: auto; /* 允许滚动 */
+            background-color: rgb(0,0,0); /* 黑色背景 */
+            background-color: rgba(0,0,0,0.4); /* 黑色背景带透明度 */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% 从顶部和左右居中 */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* 宽度为80% */
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .checked{
+            background: orange;
+            color: #fff;
+        }
+/* 结束模拟窗口 */
+
+    </style>
+</head>
+<body>
+    <form id="addCookieForm">
+        <input type="text" id="cookieName" placeholder="Cookie Name" required />
+        <input type="text" id="cookieValue" placeholder="Cookie Value" required />
+        <button type="submit">Add Cookie</button>
+        <button type="button" id="coopy_cookie">copy Cookie</button>
+    </form>
+    <ul id="cookieList">
+        <!-- 动态填充 -->
+    </ul>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <label for="inputField">cookieName</label>
+          <input type="text" id="inputField">
+          <label for="cookie">cookie</label>
+          <input type="text" id="cookieField">
+          <button id="saveButton">保存</button>
+        </div>
+      </div>
+    
+</body>
+<script src="./renderer.js"></script>
+</html>

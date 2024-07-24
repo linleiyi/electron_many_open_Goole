@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-9usAa10IRO0HhonpyAIVpjryl8WB+J4LDl/6ZCoK9MXMwwwrRT/D4Gd+Ntfm9w" crossorigin="anonymous">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+    }
+    form {
+      background-color: white;
+      padding: 70px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #error{
+        color: red;
+        margin-top: 10px;
+        font-size: 1
+        7px;
+    }
+    .icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    /* ... 原来的样式 ... */
+    position: relative; /* 使 .icon 的绝对定位相对于输入框 */
+    padding-right: 30px; /* 给图标留出空间 */
+  }
+  </style>
+</head>
+<body>
+  <form id="loginForm">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required>
+    <span class="icon fas fa-pencil-alt"></span>
+    
+    <input type="password" id="password" placeholder="Password" required>
+    <span class="icon fas fa-trash-alt"></span>
+    <button type="submit">Login</button>
+    <div id="error"></div>
+  </form>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-9usAa10IRO0HhonpyAIVpjryl8WB+J4LDl/6ZCoK9MXMwwwrRT/D4Gd+Ntfm9w" crossorigin="anonymous">
+  
+  <script src="login.js"></script>
+</body>
+</html>
